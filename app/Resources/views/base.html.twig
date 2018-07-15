@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Website to store My Courses">
+    <meta name="author" content="FRaNTiC">
+     <title>{% block title %}My WebSite{% endblock %}</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        {% block stylesheets %}  
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"/> 
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />    
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+  <a class="navbar-brand" href="/myproject/web/app_dev.php/">Achraf Mabrouk's Website</a>
+
+  <!-- Toggler/collapsi7be Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/myproject/web/app_dev.php/">Home</a>
+      </li>     
+      <li class="nav-item">
+        <a class="nav-link" href="/myproject/web/app_dev.php/cv">CV</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/myproject/web/app_dev.php/cours/show">Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="width: 105px" href="/myproject/web/app_dev.php/cours/new">Add Course</a>
+      </li>
+    </ul>
+  </div> 
+
+  <div class="container">                                          
+  <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Social Media
+    </button>
+    <div class="dropdown-menu">      
+      <a class="dropdown-item" href="https://www.facebook.com/Mabroukachraf" target="_blank">Facebook</a>
+      <a class="dropdown-item" href="https://www.youtube.com/channel/UCt_utC6Pf3IlT1FwkNnBDHw?view_as=subscriber" target="_blank">Youtube</a>
+    </div>
+  </div>
+</div>
+</nav>
+<!--end of Navigation bar-->
+<!--begin of Side bar-->
+<div id="Sidebar" class="container-fluid">
+    <div class="row d-flex d-md-block flex-nowrap wrapper">
+        <div class="col-md-3 float-left col-1 pl-0 pr-0 collapse width show">
+                <div class="list-group border-0 card text-center text-md-left">
+                    <a href="#menu1" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">Courses</span> </a>
+                    <div class="collapse" id="menu1">
+                        <a href="#menu1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Artificial Intelligence</a>
+                        <div class="collapse" id="menu1sub1">
+                            <a href="/myproject/web/app_dev.php/cours/ia" class="list-group-item" data-parent="#menu1sub1">Cours</a>
+                            <a href="#" class="list-group-item" data-parent="#menu1sub1">TD</a>  
+                        </div>
+                        <a href="#menu1sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">NetWorks II</a>
+                        <div class="collapse" id="menu1sub2">
+                            <a href="/myproject/web/app_dev.php/cours/network" class="list-group-item" data-parent="#menu1sub2">Cours</a>
+                            <a href="#" class="list-group-item" data-parent="#menu1sub2">TD</a>  
+                        </div>
+                        <a href="#menu1sub3" class="list-group-item" data-toggle="collapse" aria-expanded="false">Web Development</a>
+                        <div class="collapse" id="menu1sub3">
+                            <a href="/myproject/web/app_dev.php/cours/web" class="list-group-item" data-parent="#menu1sub3">Cours</a>
+                            <a href="#" class="list-group-item" data-parent="#menu1sub3">TP</a>  
+                        </div>
+                        <a href="#menu1sub4" class="list-group-item" data-toggle="collapse" aria-expanded="false">Java</a>
+                        <div class="collapse" id="menu1sub4">
+                            <a href="/myproject/web/app_dev.php/cours/java" class="list-group-item" data-parent="#menu1sub4">Cours</a>
+                            <a href="#" class="list-group-item" data-parent="#menu1sub4">TP</a>  
+                        </div>
+                        <a href="#menu1sub5" class="list-group-item" data-toggle="collapse" aria-expanded="false">Multimedia</a>
+                        <div class="collapse" id="menu1sub5">
+                            <a href="/myproject/web/app_dev.php/cours/multimedia" class="list-group-item" data-parent="#menu1sub5">Cours</a>
+                            <a href="#" class="list-group-item" data-parent="#menu1sub5">TP</a>  
+                        </div>
+                        <a href="#menu1sub6" class="list-group-item" data-toggle="collapse" aria-expanded="false">Distributed System</a>
+                        <div class="collapse" id="menu1sub6">
+                            <a href="/myproject/web/app_dev.php/cours/ds" class="list-group-item" data-parent="#menu1sub6">Cours</a>
+                            <a href="#" class="list-group-item" data-parent="#menu1sub6">TD</a>  
+                            <a href="#" class="list-group-item" data-parent="#menu1sub6">TP</a> 
+                        </div>
+                        <a href="#menu1sub7" class="list-group-item" data-toggle="collapse" aria-expanded="false">System Administrator</a>
+                        <div class="collapse" id="menu1sub7">
+                            <a href="/myproject/web/app_dev.php/cours/AS" class="list-group-item" data-parent="#menu1sub2">Cours</a>
+                            <a href="#" class="list-group-item" data-parent="#menu1sub7">TD</a>
+                            <a href="#" class="list-group-item" data-parent="#menu1sub7">TP</a>  
+                        </div>
+                        <a href="#menu1sub8" class="list-group-item" data-toggle="collapse" aria-expanded="false">Computer Security</a>
+                        <div class="collapse" id="menu1sub8">
+                            <a href="/myproject/web/app_dev.php/cours/security" class="list-group-item" data-parent="#menu1sub8">Cours</a>                         
+                            <a href="#" class="list-group-item" data-parent="#menu1sub8">TP</a>  
+                        </div>
+                    </div>                                                   
+            </div>
+        </div>
+ 
+    </div>
+</div>
+<!--end of Side bar-->
+<div class="container" style="margin-left: 315px; width: 75%">
+    
+   {% block body %}{% endblock %}            
+</div>
+{% block javascripts %}
+    <script src="{{asset('js/bootstrap.js')}}"></script>    
+{% endblock %}   
+</body>
+</html>
